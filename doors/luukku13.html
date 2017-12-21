@@ -43,11 +43,11 @@
 <h1>13.</h1>
 <div class="wrapper">
 	<div class="col">
-		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/partridge.png">
-        <img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/pear.png">
+		<img src="../images/partridge.png">
+        <img src="../images/pear.png">
     </div>
     <div class="col">
-    <div id="music">Päivän musiikki: <a href="https://www.youtube.com/oyEyMjdD2uk">The Twelve Days of Christmas</a></div>
+    <div id="music">Päivän musiikki: <a href="https://www.youtube.com/watch?v=oyEyMjdD2uk">The Twelve Days of Christmas</a></div>
     <h2>Tiesitkö?</h2>
     Laulun 12 säkeistöä viittaavat 12 päivään joulupäivästä loppiaista edeltävään päivään (5.1.). Kussakin säkeistössä luetellaan lahjalista, lisäten aina päivän lahja edellisen päivän listaan, eli säkeistöt pitenevät koko ajan.
     <p>
@@ -59,7 +59,7 @@
 </div>
 <script>
 
-		var dayDoor = localStorage.getItem("dayDoor");
+		var dayDoor = sessionStorage.getItem("dayDoor");
 
 		var end = new Date('12/' + dayDoor + "/2017 10:1 AM");
 
