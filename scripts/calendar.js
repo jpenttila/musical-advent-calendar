@@ -35,7 +35,7 @@ function Door(calendar, day) {
 		} else {
 			var adventMessage = this.adventMessage;
 			innerNode.onclick = function() {
-				window.open("/home/itpc/Työpöytä/Jenni/advent-calendar/doors/luukku" + day + ".html", '_blank', 'toolbar=0,location=0,menubar=0');
+				window.open("../doors/luukku" + day + ".html", '_blank', 'toolbar=0,location=0,menubar=0');
 				return false;
 			}
 		}	
