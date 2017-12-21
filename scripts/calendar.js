@@ -35,7 +35,7 @@ function Door(calendar, day) {
 		} else {
 			var adventMessage = this.adventMessage;
 			innerNode.onclick = function() {
-				window.open("/doors/luukku" + day + ".html", '_blank', 'toolbar=0,location=0,menubar=0');
+				window.open("https://jpenttila.github.io/musical-advent-calendar/doors/luukku" + day + ".html", '_blank', 'toolbar=0,location=0,menubar=0');
 				return false;
 			}
 		}	
