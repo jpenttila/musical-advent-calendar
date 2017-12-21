@@ -1,0 +1,70 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 6</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #ffcc66;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		iframe	{		
+			display: none;
+		}
+		.wrapper {
+    		display: flex;
+			flex-direction: row;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: left;
+		}
+		h1	{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>En etsi valtaa, loistoa</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/angel-gold.jpg">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			säv. Jean Sibelius
+			san. Sakari Topelius
+		</div>
+		<br>
+		<div id="luukku-txt">
+			En etsi valtaa, loistoa, en kaipaa kultaakaan,<br>
+			mä pyydän taivaan valoa ja rauhaa päälle maan.<br>
+			Se joulu suo, mi onnen tuo ja mielet nostaa Luojan luo.<br>
+			Ei valtaa eikä kultaakaan, vaan rauhaa päälle maan.<br>
+			<br>
+			Suo mulle maja rauhaisa ja lasten joulupuu,<br>
+			Jumalan sanan valoa, joss´ sieluin kirkastuu.<br>
+			Tuo kotihin, nyt pieneenkin, nyt joulujuhla suloisin,<br>
+			Jumalan sanan valoa ja mieltä jaloa.<br>
+			<br>
+			Luo köyhän niinkuin rikkahan saa, joulu ihana!<br>
+			Pimeytehen maailman tuo taivaan valoa!<br>
+			Sua halajan, sua odotan, sä Herra maan ja taivahan.<br>
+			Nyt köyhän niinkuin rikkaan luo suloinen joulus tuo!<br>
+		</div>
+	</div>
+	<div class="audio">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Gt1qCgO_UH8?autoplay=1&rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,78 @@
+@font-face	{
+	font-family: 'Mountains of Christmas';
+	src: url('MountainsofChristmas-webfont.woff') format('woff');
+}
+
+/*.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}*/
+
+/*.segment {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+body	{
+	font-family: 'Mountains of Christmas';
+	font-size: larger;
+	color: red;
+	text-align: center;
+	/*background-image: url('images/christmas-ornaments-background.png');*/
+}
+
+h2	{
+	color: #fff;
+	padding-top:150px;
+}
+
+#openday {
+	font-size: 100px;
+	color: #fff;
+}
+
+#canopen	{
+	font-size: 50px;
+	color: #fff;
+}
+
+ul#adventDoors	{
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#adventDoors li	{
+	position: absolute;
+}
+
+#adventDoors li a {
+	color: #000;
+	width: 100%;
+	height: 100%;
+	font-size: 50px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-decoration: none;
+	border: 1px #fff solid;
+}
+
+#adventDoors li a:not(.disabled):hover	{
+	color: #fff;
+	background-color: transparent;
+	background-color: rgba(255,255,255,0.15);
+}
+
+#adventDoors li a.disabled	{
+	border-color: #b6fe98;
+	background-color: rgba(196,254,171,0.15);
+	color: #b6e98;
+	cursor: default;
+}
+}

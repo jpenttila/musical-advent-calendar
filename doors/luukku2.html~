@@ -1,0 +1,81 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 2</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #ff3300;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		/*iframe	{		
+			display: none;
+		}*/
+		.wrapper {
+    		display: flex;
+			flex-direction: row;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: right;
+		}
+		h1	{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>Porsaita äidin oomme kaikki</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/gingerbread.png">	
+	</div>
+	<br>
+	<div id="luukku-txt">
+		Porsaita äidin oomme kaikki,<br>
+		oomme kaikki, oomme kaikki,<br>
+		porsaita äidin oomme kaikki,<br>
+		oomme kaikki, kaikki!<br>
+		Sinä ja minä, sinä ja minä.<br>
+		Morsgrisar är vi allihopa, allihopa, allihopa.<br>
+		Morsgrisar är vi allihopa, allihopa, jag me'.<br>
+		Jag me' och du me'.<br>
+		Jag me' och du me'.<br>
+		Morsgrisar är vi allihopa, allihopa, jag me'.<br>
+	</div>
+	<div class="audio">
+		<iframe id="songAudio" width="560" height="315" src="https://www.youtube.com/embed/FagkSZEzLYQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+</section>
+<script>
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('songAudio', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+    });
+  }
+
+function onPlayerReady(event) {
+  event.target.setVolume(30);
+  event.target.playVideo();
+}
+</script>
+</body>
+</html>

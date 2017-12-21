@@ -1,0 +1,142 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 20</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #f7d4e7;
+			font-family: 'Mountains of Christmas';
+			font-size: 17px;
+		}
+		iframe	{		
+			display: none;
+		}
+		section {
+    		display: flex;
+			justify-content: center;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: left;
+			width: 100%;
+			flex-direction: column;
+		}
+		h1	{
+			text-align: center;
+		}
+		img	{		
+			width: 70%;
+			height: auto;
+			display: block; 
+			/*margin: 0 auto;*/			
+		}
+		#ch1, #ch2, #ch3, #ch4, #ch5	{
+			display: block;
+			margin: 0 10;
+			width: 200px;
+		}
+		#p1, #p2	{
+			display:flex;
+			padding-bottom: 20px;			
+			}
+		#credits	{
+			margin: 0 10;
+		}
+		#txt-container	{
+			margin: 0 auto;
+			height: auto;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<h1>Sika</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/pig.png">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			säv. & san. Juice Leskinen<br>
+			HUOM! Tekijänoikeudellisista syistä musiikki on kuunneltavissa vain YouTubesta!
+		</div>
+		<br>
+		<div id="luukku-txt">
+			<div id="p1">
+			<div id="ch1">
+			Joulunviettomme alkaa jo toukokuussa<br>
+			Porsailla silloin on herkut suussa, se lihoo<br>
+			se kasvaa se vahvistuu.<br>
+			Ja sitten kun koittaa marraskuu<br>
+			niin lapset laulaa: jouluntähti on ehdoton<br>
+			<br>
+			Sika, se kuulan kalloon saa<br>
+			Sika, sen setä teurastaa<br>
+			Sika, ja setä verta juo<br>
+			Sika, se joulumielen tuo<br>
+			</div>
+			<div id="ch2">
+			Minä läävässä lojuvaa karjua katsoin<br>
+			Kärsivin ilmein, vellovin vatsoin<br>
+			Jouluna sikaa mä muista en<br>
+			Vain kinkkua vahtaan himoiten<br>
+			Ja lapset laulaa: jouluntähti on ehdoton<br>
+			<br>
+			Sika, kun sitä suolataan<br>
+			Sika, yhdessä kuolataan<br>
+			Sika, ja isi mielellään<br>
+			Sika, on vesi kielellään<br>
+			</div>
+			<div id="ch3">
+			Jouluruuhkassa ihminen sokkona ryntää<br>
+			Kadulla adventti sohjoa kyntää<br>
+			Joku ihmistä katsoo, kääntää pään<br>
+			Kun ihminen rypee läävässään<br>
+			Ja lapset laulaa: jouluntähti on ehdoton<br>
+			<br>
+			Sika, se kohta paistetaan<br>
+			Sika, sen perää maistetaan<br>
+			Sika, on sähköuunissa<br>
+			Sika, on mutsi duunissa<br>
+			</div>
+			</div>
+			<div id="p2">
+			<div id="ch4">
+			Kato äiti on laittanut kystäkyllä<br>
+			Sinappi huntu on sialla yllä<br>
+			Isoveli veistänsä terottaa<br>
+			Ja luistansa porsaan erottaa<br>
+			Lapset laulaa: jouluntähti on ehdoton<br>
+			<br>
+			Sika, lopulta tappoi sen<br>
+			Sika, ympäristö vatsanhappoisen<br>
+			Sika, voi kuinka isi syö<br>
+			Sika, isiltä loppuu vyö<br>
+			</div>
+			<div id="ch5">
+			Joulu täynnä on kinkkua ,kylkeä, potkaa,<br>
+			läskiä, niskaa ja tietenkin votkaa<br>
+			Kun loppuu aatto ja alkaa yö<br>
+			Ihminen on sitä mitä hän syö<br>
+			<br>
+			Sika, lalllaallaaa-aa<br>
+			Sika, trallallaa-aa<br>
+			Sika, trallallaa-aa<br>
+			Sika, trallaallaaalla-aa<br>
+			</div>
+			</div>
+	<div class="audio">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/c7SlVvdwGxM?autoplay=1&rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+</section>
+</body>
+</html>

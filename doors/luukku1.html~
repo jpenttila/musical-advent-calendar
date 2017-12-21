@@ -1,0 +1,90 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 1</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #99ccff;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		iframe	{		
+			display: none;
+		}
+		section {
+    		display: flex;
+			justify-content: center;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: left;
+		}
+		h1	{
+			text-align: center;
+		}
+		img	{		
+			width: 90%;
+			height: auto;
+			display: block; 
+			/*margin: 0 auto;*/			
+		}
+		#ch1, #ch2, #ch3, #ch4	{
+			display: block;
+			/*margin: 0 10;*/
+			width: 100%;
+		}
+		#txt-container	{
+			margin: 0 auto;
+			height: auto;
+			width: 50%;
+		}
+	</style>
+</head>
+<body>
+<h1>Luukku 1</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/santa-bus-stop.png">	
+	</div>
+	<div id="txt-container">
+		Päivän musiikki: <a href="https://www.youtube.com/eP_ipGqOPHg">Jollei jouluna ole lunta</a>
+		<h2>Tiesitkö?</h2>
+		Vain vuosina 2006-2008 joulunpyhät ovat olleet Helsingin Kaisaniemen mittauspisteellä täysin lumettomat.<br>
+		Sodankylässä sitä vastoin lunta on piisannut jokaisena jouluna aseman mittaushistorian aikana.
+		<br><br>
+		<a href="http://ilmatieteenlaitos.fi/joulunaika">Lisätietoja Ilmatieteen laitoksen sivuilla</a>
+		<br><br>
+		Päiviä jouluun jäljellä:
+		<div id="openday"></div>  
+	</div>
+</section>
+<script>
+	var dayDoor = localStorage.getItem("dayDoor");
+	
+		var end = new Date('12/' + dayDoor + "/2017 10:1 AM");
+
+    	var _second = 1000;
+    	var _minute = _second * 60;
+    	var _hour = _minute * 60;
+    	var _day = _hour * 24;
+    	var timer;
+
+    	function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        var days = Math.floor(distance / _day);
+        console.log(dayDoor, days);
+		 }	
+		 timer = setInterval(showRemaining, 1000);
+		 document.getElementById("openday").innerHTML = timer;
+</script>
+</body>
+</html>

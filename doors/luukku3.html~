@@ -1,0 +1,131 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 3</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #99ccff;
+			font-family: 'Mountains of Christmas';
+			font-size: 20px;
+		}
+		/*iframe	{		
+			display: none;
+		}*/
+		.wrapper {
+    		display: flex;
+			flex-direction: row;
+		}
+		#lyrics-container, #txt-container	{
+			width: 80%;
+    		height: 50px;
+    		/*margin: auto;*/
+    		padding: 10px;
+		}
+		#luukku-txt-1 { 
+			width: 50%;
+    		height: 200px;
+    		float: left;
+		}
+		#luukku-txt-2 { 
+			margin-left: 50%;
+    		height: 200px; 		
+		}
+		#credits	{
+			display: flex;
+			justify-content: left;
+		}
+		h1	{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>Kuuraparta</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/snowman.png">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			Säv. & san. Steve Nelson & Jack Rollins<br>
+			suom.sanat Saukki
+		</div>
+		<br>
+		<div id="lyrics-container">
+		<div id="luukku-txt-1">
+			Hei, Kuuraparta, lumiukko valkoinen, <br>
+			mustahampainen, nenä keltainen, <br>
+			teimme porkkanasta sen!<br>
+			Hei, Kuuraparta, talvipakkasilla on<br>
+			vielä voimaton lämpö auringon,<br>
+			siis on aika karkelon.<br>
+			<br>
+			Saat tästä vanhan silinterin<br>
+			päähän paljaaseen.<br>
+			Se on kai hattu taikurin<br>
+			pois täältä muuttaneen.<br>
+			Hei, Kuuraparta, nytpä jotain tapahtuu!<br>
+			Täynnä elämää aivan onkin jää<br>
+			-lumiukko naurusuu!<br>
+		</div>
+		<div id="luukku-txt-2">
+			<br>
+			Hei, Kuuraparta, tule piiriin tännepäin!<br>
+			Kanssa ystäväin tanssi alkaa näin,<br>
+			tule tänne kiirehtäin!<br>
+			Hei, Kuuraparta, jätä luuta nurkan taa!<br>
+			Kuka kiinni saa, sitä koettakaa,<br>
+			nyt on liukas jäinen maa!<br>
+			<br>
+			Kun vauhdin vaan sai mainion,<br>
+			ei seisahtua vois.<br>
+			Nyt paras myöskin poliisin<br>
+			on alta mennä pois!<br>
+			Hei, Kuuraparta, talvi vain on aikaa sun.<br>
+			Joka talvi teen sinut uudelleen,<br>
+			yhtä paljon riemastun!<br>
+			<br>
+			Hopitihopsis, hupitihupsis,<br>
+			meitä seuratkaa!<br>
+			Hopitihopsis, hupitihupsis, <br>
+			tanssia täällä saa!<br>
+		</div>
+		</div>
+	</div>
+	<div class="audio">
+		<iframe id="songAudio" width="640" height="360" src="https://www.youtube.com/embed/az7SIxrXJQk?enablejsapi=1&autoplay=1" frameborder="0"></iframe>
+	</div>
+</section>
+<script>
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('songAudio', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+    });
+  }
+
+function onPlayerReady(event) {
+  event.target.setVolume(50);
+  event.target.playVideo();
+}
+</script>
+</body>
+</html>

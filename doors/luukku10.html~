@@ -1,0 +1,98 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 10</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #85b1f7;
+			font-family: 'Mountains of Christmas';
+			font-size: 20px;
+		}
+		/*iframe	{		
+			display: none;
+		}*/
+		section {
+    		display: flex;
+			justify-content: center;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: left;
+		}
+		h1	{
+			text-align: center;
+		}
+		img	{		
+			width: 80%;
+			height: auto;
+			display: block; 
+			/*margin: 0 auto;*/			
+		}
+		#ch1, #ch2, #ch3, #ch4	{
+			display: block;
+			margin: 0 30;
+			width: 80%;
+		}
+		#credits	{
+			margin: 0 30;
+		}
+		#txt-container	{
+			margin: 0 auto;
+			height: auto;
+			width: 80%;
+		}
+	</style>
+</head>
+<body>
+<h1>Walking in the Air</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/snowflakes.png">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			säv.& san. Howard David Blake
+		</div>
+		<br>
+		<div id="luukku-txt">
+			Walking in the air, floating the sky<br>
+			Floating in the air<br>
+			We're walking in the air<br>
+			We're floating in the moonlit sky<br>
+			The people far below are sleeping as we fly<br>
+			We're holding very tight<br>
+			I'm riding in the midnight blue<br>
+			I'm finding I can fly so high above with you<br>
+			Far across the world<br>
+			The villages go by like trees<br>
+			The rivers and the hills<br>
+			The forest and the streams<br>
+			Children gaze open mouth<br>
+			Taken by surprise<br>
+			Nobody down below believes their eyes<br>
+			We're surfing in the air<br>
+			We're swimming in the frozen sky<br>
+			We're drifting over icy<br>
+			Mountains floating by<br>
+			Suddenly swooping low on an ocean deep<br>
+			Arousing of a mighty monster from its sleep<br>
+			We're walking in the air<br>
+			We're dancing in the midnight sky<br>
+			And everyone who sees us greets us as we fly...<br>
+		</div>
+	</div>
+	<div class="audio">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/av0QpbAXHq8?autoplay=1&rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+</section>
+</body>
+</html>

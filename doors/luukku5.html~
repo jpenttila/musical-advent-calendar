@@ -1,0 +1,109 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 5</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #ff3300;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		iframe	{		
+			display: none;
+		}
+		.wrapper {
+    		display: flex;
+			flex-direction: row;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: left;
+		}
+		h1	{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>Petteri Punakuono</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/rudolph.png">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			säv. & san. Johnny Marks<br>
+			suom. sanat Saukki
+		</div>
+		<br>
+		<div id="luukku-txt">
+			Muistat Tuhkimon, Lumikin, Ruususen varmaan<br>
+			ja Punahilkan ja sudenkin harmaan,<br>
+			mutta poro tää sulta useinkin unhohon jää...<br>
+			Petteri Punakuono oli poro nimeltään.<br>
+			Ollut ei loiste huono Petterimme nenänpään.<br>
+			Haukkuivat toiset illoin, majakaksi pilkaten;<br>
+			tuosta vain saikin silloin joulupukki aattehen:<br>
+			Aattoilta pitkä on, taival valoton.<br>
+			Petteri vois nenässään valon tuoda pimeään.<br>
+			Petteri siitä asti pulkkaa pukin kiskoen<br>
+			johtaa sen riemuisasti luokse lasten kilttien.<br>
+		</div>
+	</div>
+	<div class="audio">
+		<iframe id="songAudio" width="560" height="315" src="https://www.youtube.com/embed/N51RnJB00kQ?autoplay=1&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+	</div>
+</section>
+<div id="muteButton"><button type="button">Mykistys ON/OFF</button></div>
+<br>
+<br>
+<span>Äänenvoimakkuus</span>
+<button type="button" onclick="setVolumeVideo(100);">100%</button>
+<button type="button" onclick="setVolumeVideo(75);">75%</button>
+<button type="button" onclick="setVolumeVideo(50);">50%</button>
+<button type="button" onclick="setVolumeVideo(25);">25%</button>
+<script>
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('songAudio', {
+        events: {
+          'onReady': onPlayerReady,
+          'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+      	 'onStateChange': onPlayerStateChange,
+      	 'onError': onPlayerError
+        }
+    });
+  }
+
+function onPlayerReady(event) {
+  player.setVolume(10);
+  player.playVideo();
+}
+
+function muteOnOff()	{
+	if(player.isMuted())
+   	{
+        player.unMute();
+      } else {
+        player.mute();
+      }
+});
+  
+</script>
+</body>
+</html>

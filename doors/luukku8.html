@@ -1,0 +1,81 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 8</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #85b1f7;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		.wrapper {
+    		display: flex;
+		}
+		.col {   		
+    		width: 50%;
+		}
+		h1	{
+			text-align: center;
+		}
+        #openday    {
+            font-size: 100px;
+	        color: #fff;
+        }
+        #daysUntilXmas  {
+            font-size: 50px;
+	        color: #fff;
+        }
+	</style>
+</head>
+<body>
+<h1>8.</h1>
+<div class="wrapper">
+	<div class="col">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/peace-dove.png">
+    </div>
+    <div class="col">
+    <div id="music">Päivän musiikki: <a href="https://www.youtube.com/z8Vfp48laS8">Happy X-Mas (War is Over)</a></div>
+    <h2>Tiesitkö?</h2>
+   Jouluna 1969 John Lennon ja Yoko Ono järjestivät yhden suurimpia rauhankampanjoita maailmanhistoriassa. Siitä kertoo myös laulun musiikkivideo, jossa näkyy myös kampanjan juliste suomeksi. 
+    <p>
+    <div id="daysUntilXmas">Jouluun on </div>
+    <div id="openday"></div>
+    <div id="daysUntilXmas"> päivää.</div>
+    </p>
+    </div>
+</div>
+<script>
+
+		var dayDoor = localStorage.getItem("dayDoor");
+
+		var end = new Date('12/' + dayDoor + "/2017 10:1 AM");
+
+    	var _second = 1000;
+    	var _minute = _second * 60;
+    	var _hour = _minute * 60;
+    	var _day = _hour * 24;
+    	var timer;
+
+    	function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        var days = Math.floor(distance / _day);
+        console.log(dayDoor, days);
+        if (days <= 0 ) {
+            document.getElementById("openday").innerHTML = 16;
+        }   else    {
+            document.getElementById("openday").innerHTML = days;
+            }
+        }	
+		 timer = setInterval(showRemaining, 1000);
+</script>
+</body>
+</html>

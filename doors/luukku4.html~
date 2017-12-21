@@ -1,0 +1,96 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 4</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+			@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #ff5050;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		/*iframe	{		
+			display: none;
+		}*/
+		.wrapper {
+    		display: flex;
+			flex-direction: row;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: right;
+		}
+		h1	{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<h1>Nyt syttyy valot tuhannet</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/candles.png">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			säv. & san. Emmy Kohler
+		</div>
+		<br>
+		<div id="luukku-txt">
+			Nyt syttyy valot tuhannet<br>
+			myös tänne Pohjolaan,<br>
+			ja taivahalta tähtöset<br>
+			jo luovat loistettaan.<br>
+			<br>
+			Taas yli koko maailman<br>
+			käy tieto verraton:<br>
+			Jo syntyi Poika Jumalan,<br>
+			jo Kristus tullut on.<br>
+			<br>
+			Oi Betlehemin tähtönen,<br>
+			luo valos päälle maan!<br>
+			Tuo joulurauha suloinen<br>
+			myös majaan matalaan.<br>
+			<br>
+			Nyt avaa ovet sydänten,<br>
+			ne siitä rauhan saa.<br>
+			Kas, loiste joulutähtösen<br>
+			tuo rauhan maailmaan.<br>
+		</div>
+	</div>
+	<div class="audio">
+		<iframe id="songAudio" width="560" height="315" src="https://www.youtube.com/embed/pmS8LfvRNf4?autoplay=1&rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+</section>
+<script>
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('songAudio', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+    });
+  }
+
+function onPlayerReady(event) {
+  event.target.setVolume(30);
+  event.target.playVideo();
+}
+</script>
+</body>
+</html>

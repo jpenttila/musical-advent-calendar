@@ -1,0 +1,84 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 12</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #cec8c8;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		.wrapper {
+    		display: flex;
+		}
+		.col {   		
+    		width: 50%;
+		}
+		h1	{
+			text-align: center;
+		}
+        img {
+            width:90%;
+        }
+        #openday    {
+            font-size: 100px;
+	        color: #fff;
+        }
+        #daysUntilXmas  {
+            font-size: 50px;
+	        color: #fff;
+        }
+	</style>
+</head>
+<body>
+<h1>12.</h1>
+<div class="wrapper">
+	<div class="col">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/blackcap.jpg">
+    </div>
+    <div class="col">
+    <div id="music">Päivän musiikki: <a href="https://www.youtube.com/V52Mni5rPw8">Sylvian joululaulu</a></div>
+    <h2>Tiesitkö?</h2>
+    Laulun ”sylvia” on mustapääkerttu, jotka talvehtivat laulussa kuvatulla alueella. Saman lajin lintuun viitataan myös laulussa ”Kesäpäivä Kangasalla”.
+    <p>
+    <div id="daysUntilXmas">Jouluun on </div>
+    <div id="openday"></div>
+    <div id="daysUntilXmas"> päivää.</div>
+    </p>
+    </div>
+</div>
+<script>
+
+		var dayDoor = localStorage.getItem("dayDoor");
+
+		var end = new Date('12/' + dayDoor + "/2017 10:1 AM");
+
+    	var _second = 1000;
+    	var _minute = _second * 60;
+    	var _hour = _minute * 60;
+    	var _day = _hour * 24;
+    	var timer;
+
+    	function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        var days = Math.floor(distance / _day);
+        console.log(dayDoor, days);
+        if (days <= 0 ) {
+            document.getElementById("openday").innerHTML = 12;
+        }   else    {
+            document.getElementById("openday").innerHTML = days;
+            }
+        }	
+		 timer = setInterval(showRemaining, 1000);
+</script>
+</body>
+</html>

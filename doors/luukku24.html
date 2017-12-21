@@ -1,0 +1,78 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 24</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #f24324;
+			font-family: 'Mountains of Christmas';
+			font-size: 25px;
+		}
+		.wrapper {
+    		display: flex;
+		}
+		.col {   		
+    		width: 50%;
+		}
+		h1	{
+			text-align: center;
+		}
+        greeting   {
+            font-size: larger;
+            text-align: center;
+        }
+        #img1 {
+            width:90%;
+        }
+	</style>
+</head>
+<body>
+<h1>24.</h1>
+<div class="wrapper">
+	<div class="col">
+		<img id="img1" src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/merry-christmas.jpg">
+    </div>
+    <div class="col">
+    <div id="music">Päivän musiikki: <a href="https://www.youtube.com/g-OF7KGyDis">We Wish You a Merry Christmas</a></div>
+    <br>    
+    <img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/merry-christmas-world.png">
+    </div>
+</div>
+<center><p id="greeting">
+    ...ja Hyvää Joulua!
+    </p></center>
+<script>
+
+		var dayDoor = localStorage.getItem("dayDoor");
+
+		var end = new Date('12/' + dayDoor + "/2017 10:1 AM");
+
+    	var _second = 1000;
+    	var _minute = _second * 60;
+    	var _hour = _minute * 60;
+    	var _day = _hour * 24;
+    	var timer;
+
+    	function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        var days = Math.floor(distance / _day);
+        console.log(dayDoor, days);
+        if (days <= 0 ) {
+            document.getElementById("openday").innerHTML = 23;
+        }   else    {
+            document.getElementById("openday").innerHTML = days;
+            }
+        }	
+		 timer = setInterval(showRemaining, 1000);
+</script>
+</body>
+</html>

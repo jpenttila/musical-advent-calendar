@@ -1,0 +1,96 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 16</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #7ccdef;
+			font-family: 'Mountains of Christmas';
+			font-size: 18px;
+		}
+		iframe	{		
+			display: none;
+		}
+		section {
+    		display: flex;
+			justify-content: center;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: left;
+		}
+		h1	{
+			text-align: center;
+		}
+		img	{		
+			width: 50%;
+			height: auto;
+			display: block; 
+			/*margin: 0 auto;*/			
+		}
+		#ch1, #ch2, #ch3, #ch4	{
+			display: block;
+			margin: 0 30;
+			width: 80%;
+		}
+		#credits	{
+			margin: 0 30;
+		}
+		#txt-container	{
+			margin: 0 auto;
+			height: auto;
+			width: 50%;
+		}
+	</style>
+</head>
+<body>
+<h1>Joulukirkkoon</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/christmas-church.png">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			säv. R. Raala (Berndt Sarlin)<br>
+			san. Immi Hellén
+		</div>
+		<br>
+		<div id="luukku-txt">
+			<div id="ch1">
+			Kello löi jo viisi, lapset herätkää!<br>
+			Juhani ja Liisi – muuten matka jää.<br>
+			<br>
+			Tässä vesimalja, silmät huuhtokaa!<br>
+			Lämmin karhuntalja reessä odottaa.<br>
+			<br>
+			Vasta ruunan reessä silmät aukeaa.<br>
+			Siin´ on silmäin eessä synkkä metsämaa.<br>
+			<br>
+			Aisakello helkkää, loistaa tähdet, kuu.<br>
+			Riemua on pelkkää, hymyyn käypi suu.<br>
+			<br>
+			Tuossa mökin Miina kulkee kirkolle.<br>
+			Taavetti ja Tiina, nouskaa kannoille!<br>
+			<br>
+			Mäenrinteen alla talo törröttää,<br>
+			joka ikkunalla kaksi kynttilää.<br>
+			<br>
+			Ruuna, virsta vielä tepsuttele pois!<br>
+			Tällä kirkkotiellä aina olla vois!<br>
+			</div>
+	</div>
+	<div class="audio">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/GH2QL9WJCzA?autoplay=1&rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+</section>
+</body>
+</html>

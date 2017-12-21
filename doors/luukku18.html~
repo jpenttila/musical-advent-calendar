@@ -1,0 +1,97 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Luukku 18</title>
+	<!--mobiililaitekilke-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" media="all">
+	<style>
+		@font-face	{
+			font-family: 'Mountains of Christmas';
+			src: url('MountainsofChristmas-webfont.woff') format('woff');
+		}
+		body	{
+			background-color: #e2af48;
+			font-family: 'Mountains of Christmas';
+			font-size: 20px;
+		}
+		iframe	{		
+			display: none;
+		}
+		section {
+    		display: flex;
+			justify-content: center;
+		}
+		#luukku-txt {   		
+    		display: flex;
+			justify-content: left;
+		}
+		h1	{
+			text-align: center;
+		}
+		img	{		
+			width: 90%;
+			height: auto;
+			display: block; 
+			/*margin: 0 auto;*/			
+		}
+		#ch1, #ch2, #ch3, #ch4	{
+			display: block;
+			/*margin: 0 10;*/
+			width: 90%;
+		}
+		#credits	{
+			margin: 0 30;
+		}
+		#txt-container	{
+			margin: 0 auto;
+			height: auto;
+			width: 50%;
+		}
+	</style>
+</head>
+<body>
+<h1>Heinillä härkien kaukalon</h1>
+<section class="wrapper">
+	<div id="image">
+		<img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/nativity.png">	
+	</div>
+	<br>
+	<div id="txt-container">
+		<div id="credits">
+			säv. ranskalainen joululaulu<br>
+			suom. san. Martti Korpilahti<br>
+			ST 20, JT 20, KJ 70
+		</div>
+		<br>
+		<div id="luukku-txt">
+			<div id="ch1">
+			Heinillä härkien kaukalon<br>
+			nukkuu lapsi viaton.<br>
+			Enkelparven tie<br>
+			kohta luokse vie<br>
+			rakkautta suurinta katsomaan.<br>
+			</div>
+			<div id="ch2">
+			Helmassa äitinsä armahan<br>
+			nukkuu Poika Jumalan.<br>
+			Enkelparven tie...<br>
+			</div>
+			<div id="ch3">
+			Keskellä liljain ja ruusujen<br>
+			nukkuu Herra ihmisten.<br>
+			Enkelparven tie...<br>
+			</div>
+			<div id="ch4">
+			Ristillä rinnalla ryövärin<br>
+			nukkuu uhri puhtahin.<br>
+			Enkelparven tie...<br>
+			</div>
+	</div>
+	<div class="audio">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/NkYFIUAGsAY?autoplay=1&rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	</div>
+</section>
+</body>
+</html>
