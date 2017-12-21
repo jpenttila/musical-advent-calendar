@@ -38,12 +38,12 @@
 <h1>24.</h1>
 <div class="wrapper">
 	<div class="col">
-		<img id="img1" src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/merry-christmas.jpg">
+		<img id="img1" src="../images/merry-christmas.jpg">
     </div>
     <div class="col">
-    <div id="music">Päivän musiikki: <a href="https://www.youtube.com/g-OF7KGyDis">We Wish You a Merry Christmas</a></div>
+    <div id="music">Päivän musiikki: <a href="https://www.youtube.com/watch?v=g-OF7KGyDis">We Wish You a Merry Christmas</a></div>
     <br>    
-    <img src="/home/itpc/Työpöytä/Jenni/advent-calendar/images/merry-christmas-world.png">
+    <img src="../images/merry-christmas-world.png">
     </div>
 </div>
 <center><p id="greeting">
@@ -51,7 +51,7 @@
     </p></center>
 <script>
 
-		var dayDoor = localStorage.getItem("dayDoor");
+		var dayDoor = sessionStorage.getItem("dayDoor");
 
 		var end = new Date('12/' + dayDoor + "/2017 10:1 AM");
 
